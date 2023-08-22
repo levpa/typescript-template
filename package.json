@@ -1,0 +1,14 @@
+{
+  "name": "my-ts",
+  "version": "1.0.0",
+  "description": "test typescript code",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "Lev Pa",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
