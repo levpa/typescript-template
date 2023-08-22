@@ -1,3 +1,20 @@
+type User = {
+  name: string;
+  age: number;
+}
+function greet(user: User) {
+  console.log('Hi, I am ' + user.name);
+}
+
+function isOlder(user: User, checkAge: number) {
+  return checkAge > user.age;
+}
+
+const u1: User = { name: 'Max', age: 30 };
+
+console.log(greet(u1));
+console.log("Older then 20 years? " + isOlder(u1, 20));
+
 type Combinable = number | string;
 type ConversionDescriptor = 'as-number' | 'as-text';
 
