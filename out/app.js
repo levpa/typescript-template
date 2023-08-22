@@ -12,3 +12,5 @@ function combine(input1, input2) {
 const combinedAges = combine(29, 34);
 const combineNames = combine('Lev', 'Alina');
 console.log(combineNames, combinedAges);
+//# sourceMappingURL=app.js.map
+

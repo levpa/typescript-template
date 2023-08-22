@@ -18,3 +18,4 @@ for (const hobby in person.hobbies) {
 if (person.role === Role.ADMIN) {
     console.log(Role.ADMIN);
 }
+//# sourceMappingURL=obj_arrays_enums.js.map
