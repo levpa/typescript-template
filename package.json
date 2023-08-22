@@ -4,12 +4,20 @@
   "description": "test typescript code",
   "main": "app.js",
   "scripts": {
-    "wait": "tsc -w -p .",
-    "server": "lite-server"
+    "dev": "tsc -w -p .",
+    "server": "lite-server",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix"
   },
   "author": "Lev Pa",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "lite-server": "^2.6.1",
+    "prettier": "^3.0.2"
   }
 }

@@ -5,7 +5,6 @@ var Role;
     Role["READ_ONLY"] = "RO";
     Role["AUTHOR"] = "AUTHOR";
 })(Role || (Role = {}));
-;
 const person = {
     name: "Lev's name",
     age: 30,
