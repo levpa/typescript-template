@@ -4,7 +4,8 @@
   "description": "test typescript code",
   "main": "app.js",
   "scripts": {
-    "start": "lite-server"
+    "wait": "tsc -w -p .",
+    "server": "lite-server"
   },
   "author": "Lev Pa",
   "license": "ISC",

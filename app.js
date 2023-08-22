@@ -1,9 +1,14 @@
-var button = document.querySelector("button");
-var input1 = document.getElementById("num1");
-var input2 = document.getElementById("num2");
-function add(num1, num2) {
-    return num1 + num2;
+"use strict";
+function combine(input1, input2) {
+    let result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + ' ' + input2.toString();
+    }
+    return result;
 }
-button.addEventListener("click", function () {
-    console.log(add(+input1.value, +input2.value));
-});
+const combinedAges = combine(29, 34);
+const combineNames = combine('Lev', 'Alina');
+console.log(combineNames, combinedAges);
