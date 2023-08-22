@@ -1,37 +1,17 @@
-type User = {
-  name: string;
-  age: number;
-}
-function greet(user: User) {
-  console.log('Hi, I am ' + user.name);
+function add(n1: number, n2: number) {
+  return n1 + n2;
 }
 
-function isOlder(user: User, checkAge: number) {
-  return checkAge > user.age;
+function printResult( num: number): void {
+    console.log('Result: ' + num)
 }
 
-const u1: User = { name: 'Max', age: 30 };
+printResult(add(53, 12))
 
-console.log(greet(u1));
-console.log("Older then 20 years? " + isOlder(u1, 20));
+type myFunc = (a: number, b: number) => number;
 
-type Combinable = number | string;
-type ConversionDescriptor = 'as-number' | 'as-text';
-
-function combine(input1: Combinable, input2: Combinable, resultConversion: ConversionDescriptor) {
-  let result;
-  if (
-    (typeof input1 === 'number' && typeof input2 === 'number') ||
-    resultConversion === 'as-number'
-  ) {
-    result = +input1 + +input2;
-  } else {
-    result = input1.toString() + ' ' + input2.toString();
-  }
-  return result;
+const combineValues: myFunc = function(x, y) {
+    return x + y;
 }
 
-const combinedAges = combine('29', '40', 'as-number');
-const combineNames = combine('Lev', 'Alina', 'as-text');
-
-console.log(combineNames, combinedAges);
+console.log(combineValues(7, 8))
