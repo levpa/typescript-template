@@ -1,3 +1,14 @@
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = 'Max';
+
+if (typeof userInput === 'string') {
+    userName = userInput;
+    console.log(userName)
+}
+
 function add(n1: number, n2: number) {
   return n1 + n2;
 }
@@ -15,3 +26,15 @@ const combineValues: myFunc = function(x, y) {
 }
 
 console.log(combineValues(7, 8))
+
+const button = document.querySelector('button')!;
+
+button.addEventListener('click', ()=> {
+    console.log('Clicked!');
+});
+
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code };
+}
+
+generateError('An error occured!', 500);
