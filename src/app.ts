@@ -1,40 +1,21 @@
-let userInput: unknown;
-let userName: string;
+class Department {
+    name: string;
 
-userInput = 5;
-userInput = 'Max';
+    constructor(n: string) {
+        this.name = n;
+    }
 
-if (typeof userInput === 'string') {
-    userName = userInput;
-    console.log(userName)
+    describe(this: Department) {
+        console.log('Department: ' + this.name);
+    }
 }
 
-function add(n1: number, n2: number) {
-  return n1 + n2;
-}
+const myClass = new Department('Lev');
 
-function printResult( num: number): void {
-    console.log('Result: ' + num)
-}
+console.log(myClass)
 
-printResult(add(53, 12))
+myClass.describe();
 
-type myFunc = (a: number, b: number) => number;
+const myClassCopy = { name: 'satisfies', describe: myClass.describe }
 
-const combineValues: myFunc = function(x, y) {
-    return x + y;
-}
-
-console.log(combineValues(7, 8))
-
-const button = document.querySelector('button')!;
-
-button.addEventListener('click', ()=> {
-    console.log('Clicked!');
-});
-
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
-}
-
-generateError('An error occured!', 500);
+myClassCopy.describe()

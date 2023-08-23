@@ -4,8 +4,8 @@
   "description": "test typescript code",
   "main": "index.html",
   "scripts": {
-    "dev": "tsc -w -p .",
-    "server": "lite-server",
+    "compile": "tsc -w -p .",
+    "start": "lite-server",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix"
